@@ -31,6 +31,7 @@ namespace WF_DrawButton
         {
             if (_startPoint.IsEmpty) return;
             if (_startPoint.X > e.X) buttons[^1].Location = e.Location;
+            else if (_startPoint.Y > e.Y) buttons[^1].Location = new Point(_startPoint.X, e.Y);
 
             // https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/ranges
 
