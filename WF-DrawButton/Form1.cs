@@ -2,6 +2,7 @@ namespace WF_DrawButton
 {
     public partial class Form1 : Form
     {
+        Random rand = new Random();
         Point _startPoint = new Point();
         List<Button> buttons = new List<Button>();
 
@@ -40,6 +41,7 @@ namespace WF_DrawButton
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
             _startPoint = Point.Empty;
+            buttons[^1].BackColor = Color.FromArgb(255, rand.Next(0, 256), rand.Next(0, 256), rand.Next(0, 256));
         }
     }
 }
